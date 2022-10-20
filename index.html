@@ -12,13 +12,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
 
-<!--    Libs-->
+    <!--    Libs-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-<!--    Styles  -->
+    <!--    Styles  -->
     <link rel="stylesheet" href="styles/styles.css">
-
+    <!--Script-->
     <script src="script/script.js" defer></script>
 </head>
 <body>
@@ -30,11 +30,62 @@
         </div>
     </div>
 
-    <div class="hb-app-hero">
+    <div class="hb-app-hero" style="background-image: url(img/hero-bg-mobile.png);">
+        <div class="hb-app-hero__video">
+            <video src="files/app-hero-bg.mp4" autoplay loop muted></video>
+        </div>
         <div class="hb-app-hero__container pt-pb-md">
-
+            <div class="hb-app-hero__engine">
+                <a href="#!" class="hb-app-hero__start" id="carEngineStartBtn">Engine <br> Start</a>
+            </div>
+            <audio src="files/car-engine-start.mp3" id="carEngineStart"></audio>
         </div>
     </div>
+
+    <div class="hb-app-options">
+        <div class="hb-app-options__inner">
+            <a href="#package1" data-modal-id="package1" class="hb-app-options__item pt-pb-md" style="background-image: url(img/package-clean.jpeg)">
+                <span>Clean My Car</span>
+            </a>
+            <a href="#package2" class="hb-app-options__item pt-pb-md" style="background-image: url(img/package-protect.jpeg)">
+                <span>Protect my Car</span>
+            </a>
+            <a href="#package3" class="hb-app-options__item pt-pb-md" style="background-image: url(img/package-tint.jpeg)">
+                <span>Tint my Car</span>
+            </a>
+        </div>
+    </div>
+
+    <footer class="hb-app-footer">
+        <div class="hb-app-footer__container">
+            <p>&copy; Auto Detailing 360 LLC all Rights reserved. <!--Custom programming by <a
+                    href="https://www.upwork.com/freelancers/~01a4958bbb029e2894" target="_blank">Viktor
+                Kovtun</a>--></p>
+        </div>
+    </footer>
+
+<!--  Modals  -->
+<!--package1-->
+    <div class="modal-backdrop" id="package1">
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a href="#!" class="close-modal">×</a>
+                    <div class="modal-package-content">
+                        <h2 class="heading">Clean My Car</h2>
+                        <div class="modal-package-content__holder">
+                            <div class="modal-package-content__item">
+                                <img src="" alt="package" loading="lazy" class="modal-package-content__img">
+                                <h3 class="heading2">Full Detail</h3>
+                                <a href="#!" class="btn">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

@@ -14,7 +14,7 @@
 
     <!--    Libs-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">-->
 
     <!--    Styles  -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -24,67 +24,258 @@
 <body>
 <div class="hb-app-wrapper">
 
-    <div class="hb-app-return">
-        <div class="hb-app-return__container pt-pb-sm">
-            <a href="#!" class="btn"><i class="fa-solid fa-arrow-left-long"></i> Return to site</a>
+    <header class="hb-app-header">
+        <div class="hb-app-header__container p-sm">
+            <a href="//autodetailing360.com" target="_blank" class="hb-app-header__btn btn opacity-return-on-hover">Back
+                To Site</a>
+            <button class="hb-app-header__hamburger">
+                <span class="hb-app-header__hamburger-line"></span>
+                <span class="hb-app-header__hamburger-line"></span>
+                <span class="hb-app-header__hamburger-line"></span>
+                &nbsp;
+            </button>
+            <ul class="hb-app-header__menu lh">
+                <li><a href="#package-select-1">Clean My Car</a></li>
+                <li class="hb-app-header__sub-menu"><a href="#package-1-1">Full Detail</a></li>
+                <li class="hb-app-header__sub-menu"><a href="#package-1-2">Interior Only</a></li>
+                <li class="hb-app-header__sub-menu"><a href="#package-1-3">Exterior Only</a></li>
+                <li><a href="#package-select-2">Protect My Car</a></li>
+                <li class="hb-app-header__sub-menu"><a href="#!">Ceramic Coating</a></li>
+                <li class="hb-app-header__sub-menu"><a href="#!">PPF</a></li>
+                <li class="hb-app-header__sub-menu"><a href="#!">Ultimate Armor</a></li>
+                <li><a href="#!">Tint My Car</a></li>
+            </ul>
         </div>
-    </div>
+    </header>
 
-    <div class="hb-app-hero" style="background-image: url(img/hero-bg-mobile.png);">
-        <div class="hb-app-hero__video">
-            <video src="files/app-hero-bg.mp4" autoplay loop muted></video>
-        </div>
-        <div class="hb-app-hero__container pt-pb-md">
-            <div class="hb-app-hero__engine">
-                <a href="#!" class="hb-app-hero__start" id="carEngineStartBtn">Engine <br> Start</a>
-            </div>
-            <audio src="files/car-engine-start.mp3" id="carEngineStart"></audio>
-        </div>
+    <!--    Intro Package with car engine sound -->
+    <div class="hb-app-package package0 flex-center" id="package0" style="background-image: url();">
+        <a href="#package-select" id="soundStart" class="p-sm"><img src="img/start-stop2a.png" alt="start"
+                                                                    class="img-responsive" loading="lazy"></a>
+        <audio src="files/car-engine-start_1.mp3" id="soundSrc"></audio>
     </div>
+    <!--End of package-->
 
-    <div class="hb-app-options">
-        <div class="hb-app-options__inner">
-            <a href="#package1" data-modal-id="package1" class="hb-app-options__item pt-pb-md" style="background-image: url(img/package-clean.jpeg)">
-                <span>Clean My Car</span>
+    <!--    Package select-->
+    <div class="hb-app-package package-select flex-center" id="package-select" style="background-image: url();">
+        <div class="flex-center">
+            <a href="#package-select-1" class="hb-app-package__box box opacity-return-on-hover">Clean My Car</a>
+            <a href="#package-select-2" class="hb-app-package__box box opacity-return-on-hover">Protect My Car</a>
+            <a href="#!" class="hb-app-package__box box opacity-return-on-hover">Tint My Car</a>
+        </div>
+    </div>
+    <!--End of package-->
+
+    <!--    Package select-1-->
+    <div class="hb-app-package package-select flex-center" id="package-select-1" style="background-image: url();">
+        <div class="flex-center">
+            <a href="#package-1-1" class="hb-app-package__box box opacity-return-on-hover">Full Detail</a>
+            <a href="#package-1-2" class="hb-app-package__box box opacity-return-on-hover">Interior Only</a>
+            <a href="#package-1-3" class="hb-app-package__box box opacity-return-on-hover">Exterior Only</a>
+        </div>
+    </div>
+    <!--End of package-->
+
+    <!--    Package 1-1 -->
+    <div class="hb-app-package package-description" id="package-1-1" style="background-image: url();">
+        <h2 class="package-title font-size4">Full Detail</h2>
+        <p class="package-options">Select options:</p>
+
+        <div class="package-head expand-head font-size2">Full Detail</div>
+        <div class="package-content expand-content">
+            As Grand Junction's best Auto Detailing Company we offer premier detail packages that leave your car looking
+            and feeling like new. Our full detail is an outstanding way to restore your vehicle to "just drove it off
+            the lot" condition. We will spend 4-5 man-hours detailing your car or truck with our state-of-the-art
+            detailing equipment. From the engine compartment to the brake pedal, we believe car detailing and truck
+            detailing is about more than just washing or cleaning your car. It is about making your vehicle look its
+            absolute best.
+
+            <div class="package-price">Price: $299.99 - $399.99</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Full Detail + 6 Month Ceramic</div>
+        <div class="package-content expand-content">
+            While the Sport Package may not be our favorite ceramic coating package, as part of a full detail, it is the
+            absolute best. Outstanding for ceramic coated vehicles, vehicles with a clear bra or PPF and vehicles that
+            have never been coated at all. Plus the exterior is not the only portion of the vehicle to be protected. All
+            interior leather, wood, plastic, fabric, and carpet will also receive an outstanding layer of Ceramic Pro
+            protection.
+
+            <div class="package-price">Price: $599</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Full Detail + Ceramic Interior & 6 Month Ceramic Exterior</div>
+        <div class="package-content expand-content">
+            Maybe the inside of your car is clean, and you just need the outside to glow. The ceramic pro exterior
+            package is a full exterior detail with the protection of a Ceramic Pro Spray Ceramic.
+
+            <div class="package-price">Price: $299 - $349</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+    </div>
+    <!--End of package-->
+
+    <!--    Package 1-2 -->
+    <div class="hb-app-package package-description" id="package-1-2" style="background-image: url();">
+        <h2 class="package-title font-size4">Interior Only</h2>
+        <p class="package-options">Select options:</p>
+
+        <div class="package-head expand-head font-size2">Interior Detail</div>
+        <div class="package-content expand-content">
+            <ul>
+                <li>Interior Vacuum</li>
+                <li>Deep Clean Floor Mats</li>
+                <li>Clean Seats & Carpet</li>
+                <li>Clean & Dress Interior Surfaces</li>
+                <li>Clean Windows/ Windshield</li>
+                <li>Headliner Cleaning</li>
+                <li>Clean Door Sills</li>
+                <li>Clean Seatbelts & Buckles</li>
+                <li>Clean Pedals</li>
+            </ul>
+
+            <div class="package-price">Price: $175</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Interior Detail + Ceramic Interior</div>
+        <div class="package-content expand-content">
+            Salespeople, Real Estate agents, Soccer Dads, and Soccer Moms LOVE this package. If your vehicle is also
+            your kid carrier, dining room, and or office, this is a great way to clean and protect your interior.
+
+            <div class="package-price">Price: $399</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+
+    </div>
+    <!--End of package-->
+
+    <!--    Package 1-3 -->
+    <div class="hb-app-package package-description" id="package-1-3" style="background-image: url();">
+        <h2 class="package-title font-size4">Interior Only</h2>
+        <p class="package-options">Select options:</p>
+
+        <div class="package-head expand-head font-size2">Exterior Detail</div>
+        <div class="package-content expand-content">
+            <ul>
+                <li>Engine Compartment Cleaning</li>
+                <li>Insect Removal</li>
+                <li>Wheel & Tire Cleaning</li>
+                <li>Chemical Decontamination</li>
+                <li>Clean Windows/ Windshield</li>
+                <li>Foam Pre-Wash</li>
+                <li>Hand Wash</li>
+                <li>Spot Free Rinse</li>
+                <li>Hand Dry & Air Dry</li>
+                <li>Light Polish</li>
+                <li>Polymer Based Sealant</li>
+                <li>Tire Dressing</li>
+            </ul>
+
+            <div class="package-price">Price: $175</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Exterior Detail plus 6 Month Ceramic Ceramic</div>
+        <div class="package-content expand-content">
+            Our flagship full detail. Our full-service "360 Detail" is detailing the way it is meant to be done!
+            Detailing is done in our shop using a combination of German Engineered and American products. All surfaces
+            are cleaned and protected with an appropriate product. We utilize two pressure washers, CR Spotless purified
+            water on final rinse, and Rupes polishers combined with Rupes compound & polish. We have top-of-the-line
+            steaming and extraction onsite.
+
+            <div class="package-price">Price: $299 - $349</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+
+    </div>
+    <!--End of package-->
+
+    <!--    Package select-2-->
+    <div class="hb-app-package package-select flex-center" id="package-select-2" style="background-image: url();">
+        <div class="flex-center">
+            <a href="#package-2-1" class="hb-app-package__box box opacity-return-on-hover text-center">
+                Ceramic <br>
+                Coating
+                <br>
             </a>
-            <a href="#package2" class="hb-app-options__item pt-pb-md" style="background-image: url(img/package-protect.jpeg)">
-                <span>Protect my Car</span>
+            <a href="#package-2-2" class="hb-app-package__box box opacity-return-on-hover text-center">
+                Paint <br>
+                Protection Film
             </a>
-            <a href="#package3" class="hb-app-options__item pt-pb-md" style="background-image: url(img/package-tint.jpeg)">
-                <span>Tint my Car</span>
+            <a href="#package-2-3" class="hb-app-package__box box opacity-return-on-hover text-center">
+                Ultimate Armor <br>
+                Full Lifetime Protection
             </a>
         </div>
     </div>
+    <!--End of package-->
+
+    <!--    Package 1-1 -->
+    <div class="hb-app-package package-description" id="package-2-1" style="background-image: url();">
+        <h2 class="package-title font-size4">Ceramic Coating</h2>
+        <p class="package-options">Select options:</p>
+
+        <div class="package-head expand-head font-size2">Sport Package </div>
+        <div class="package-content expand-content">
+            If you want hydrophobic protection of a ceramic coating but are not ready to invest the big bucks, the Ceramic Pro Sport package gives you a great option that can be improved on later. Plus you can have your car back the same day or early the following day
+
+            <div class="package-price">Price: $299 - $349</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Bronze Package </div>
+        <div class="package-content expand-content">
+            Our most affordable traditional ceramic package. One layer of top coat on painted surfaces and 9H on plastic surfaces. Windshield protection and wheel face protection. This is a great entry-level package, but we suggest backing off to the sport package (for now) or upgrading to the silver package
+
+            <div class="package-price">Price: $749 - $999</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Silver Package </div>
+        <div class="package-content expand-content">
+            Our most popular ceramic package. Complete with 2-Step paint correction and two layers of exterior protection, this is a true 9H ceramic coating
+
+            <div class="package-price">Price: $1499 - $1899</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+        <div class="package-head expand-head font-size2">Gold Package </div>
+        <div class="package-content expand-content">
+            Our ceramic coating package is for those with vehicles they are going to keep, collect or drive until it dies. Perfect for collector vehicles and working trucks, our Ceramic Pro Gold package comes with a Nationally registered lifetime guarantee.
+
+            <div class="package-price">Price: $2299 - $2699</div>
+
+            <a href="https://orbisx.ca/app/booknow/VSVh4" target="_blank" class="btn">Schedule Now</a>
+        </div>
+
+
+    </div>
+    <!--End of package-->
+
 
     <footer class="hb-app-footer">
-        <div class="hb-app-footer__container">
-            <p>&copy; Auto Detailing 360 LLC all Rights reserved. <!--Custom programming by <a
+        <div class="hb-app-footer__container p-sm">
+            <p class="font-size-sm lh-md">&copy; Auto Detailing 360 LLC all Rights reserved. Custom programming by <a
                     href="https://www.upwork.com/freelancers/~01a4958bbb029e2894" target="_blank">Viktor
-                Kovtun</a>--></p>
+                Kovtun</a></p>
         </div>
     </footer>
-
-<!--  Modals  -->
-<!--package1-->
-    <div class="modal-backdrop" id="package1">
-        <div class="modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <a href="#!" class="close-modal">×</a>
-                    <div class="modal-package-content">
-                        <h2 class="heading">Clean My Car</h2>
-                        <div class="modal-package-content__holder">
-                            <div class="modal-package-content__item">
-                                <img src="" alt="package" loading="lazy" class="modal-package-content__img">
-                                <h3 class="heading2">Full Detail</h3>
-                                <a href="#!" class="btn">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </div>
 </body>

@@ -1,55 +1,73 @@
-let appCartArray = [];
-
-//engine sound hero
-let carEngineStartBtn = document.getElementById('carEngineStartBtn'),
-    carEngineStart = document.getElementById('carEngineStart');
-
-carEngineStartBtn.addEventListener('click', function (){
-
-    if (carEngineStart.paused) {
-        carEngineStart.play();
-    }else{
-        carEngineStart.currentTime = 0
+//hash
+try {
+    if(window.location.hash === '' || window.location.hash === '#!') {
+        window.location.hash = '#package0'
     }
-})
-
-//end of engine sound hero
-
-
-//modal
-let modalBackDrop = document.querySelectorAll('.modal-backdrop'),
-    modalClose = document.querySelectorAll('.close-modal'),
-    modalContent = document.querySelectorAll('.modal-content'),
-    dataModal = document.querySelectorAll('[data-modal-id]');
-
-dataModal.forEach(item => {
-    item.addEventListener('click', e => {
-        let dataId = item.getAttribute('data-modal-id');
-        let modalBackdrop = document.querySelector(`#${dataId}`);
-        if (modalBackdrop) {
-            modalBackdrop.classList.add('active');
-            document.body.classList.add('_lock');
+    window.addEventListener('hashchange', () => {
+        let hash = window.location.hash;
+        switch (hash) {
+            case '':
+            case '#!':
+                window.location.hash = '#package0';
+                break;
         }
     })
-})
+} catch (e) {
+    console.log('hash error ', e);
+}
 
-modalContent.forEach(item => {
-    item.addEventListener('click', e => {
+//Car engine sound onclick
+try {
+    let carEngineStartBtn = document.getElementById('soundStart'),
+        carEngineStart = document.getElementById('soundSrc');
+
+    carEngineStartBtn.addEventListener('click', function () {
+
+        if (carEngineStart.paused) {
+            carEngineStart.play();
+        } else {
+            carEngineStart.currentTime = 0
+        }
+    })
+} catch (e) {
+    console.log('Car engine sound error ', e);
+}
+//end of engine sound hero
+
+//header hamburger menu
+try {
+    let hamburgerButton = document.querySelector('.hb-app-header__hamburger'),
+        hamburgerMenu = document.querySelector('.hb-app-header__menu'),
+        headerMenu = document.querySelector('.hb-app-header'),
+        headerActiveClass = 'active';
+
+    hamburgerButton.addEventListener('click', e => {
         e.stopPropagation();
+        headerMenu.classList.toggle(headerActiveClass);
     })
-})
-modalClose.forEach(item => {
-    item.addEventListener('click', e => {
+    document.body.addEventListener('click', e => {
         let current = e.target;
-        current.closest('.modal-backdrop').classList.remove('active');
-        document.body.classList.remove('_lock');
+        if (!current.classList.contains('hb-app-header__menu') || !current.closest('.hb-app-header__menu')) {
+            headerMenu.classList.remove(headerActiveClass);
+        }
     })
-})
-modalBackDrop.forEach(item => {
-    item.addEventListener('click', e => {
-        item.classList.remove('active');
-        document.body.classList.remove('_lock');
-    })
-})
+} catch (e) {
+    console.log('Header Hamburger menu error ', e);
+}
 
-//end of modal
+//expand - collapse
+try {
+    let expandHead = document.querySelectorAll('.expand-head'),
+        expandContent = document.querySelectorAll('.expand-content'),
+        activeClass = 'active';
+
+    for (let i = 0; i < expandHead.length; i++) {
+        expandHead[i].addEventListener('click', function (){
+            expandHead[i].classList.toggle(activeClass);
+            expandContent[i].classList.toggle(activeClass);
+        })
+    }
+
+} catch (e) {
+    console.log('expand-collaple error ', e);
+}

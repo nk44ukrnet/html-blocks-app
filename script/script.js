@@ -1,9 +1,22 @@
 //hash
 try {
+    function backBtnDisplayCondition(){
+        let backBtn = document.getElementById('backBtn');
+        if(backBtn) {
+            let currentHash = window.location.hash;
+            if(currentHash == '#package0') {
+                backBtn.style.display = 'none';
+            } else {
+                backBtn.style.display = ''
+            }
+        }
+    }
     if(window.location.hash === '' || window.location.hash === '#!') {
         window.location.hash = '#package0'
     }
+    backBtnDisplayCondition();
     window.addEventListener('hashchange', () => {
+        backBtnDisplayCondition();
         let hash = window.location.hash;
         switch (hash) {
             case '':

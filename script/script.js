@@ -45,7 +45,7 @@ try {
 } catch (e) {
     console.log('Car engine sound error ', e);
 }
-//end of engine sound hero
+//end of engine sound
 
 //header hamburger menu
 try {
@@ -82,5 +82,5 @@ try {
     }
 
 } catch (e) {
-    console.log('expand-collaple error ', e);
+    console.log('expand-collapse error ', e);
 }

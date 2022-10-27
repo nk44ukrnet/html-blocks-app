@@ -10,6 +10,9 @@
   --color1-light2: hsla(326, 61%, 52%, 0.2);
   --color1-light3: hsla(326, 61%, 52%, 0.1);
   --backdrop1: rgba(0, 0, 0, 0.8);
+  --extra-color1: #ffd700;
+  --extra-color2: #c0c0c0;
+  --extra-color3: #cd7f31;
   --lh-md: 150%;
   --lh: 200%;
   --font1: 'Montserrat', sans-serif;
@@ -39,6 +42,15 @@
     --gap-md: 30px;
     --gap-sm: 15px;
   }
+}
+.extra-color1 {
+  color: var(--extra-color1);
+}
+.extra-color2 {
+  color: var(--extra-color2);
+}
+.extra-color3 {
+  color: var(--extra-color3);
 }
 .font-size-sm {
   font-size: var(--font-size-sm);
@@ -315,6 +327,28 @@ body {
 }
 .hb-app-package.package-description .package-content:not(.active) {
   display: none;
+}
+.hb-app-package.package-description .package-content-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-sm);
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--gap-sm);
+  padding-bottom: var(--gap-sm);
+}
+.hb-app-package.package-description .img-content {
+  flex: 0 1 500px;
+}
+.hb-app-package.package-description .text-content {
+  flex: 1 1 500px;
+}
+.hb-app-package.package-description .text-content .package-price {
+  background-color: var(--light);
+  padding: var(--gap-xsm);
+  margin-top: var(--gap-sm);
+  margin-bottom: var(--gap-sm);
+  color: var(--dark);
 }
 .hb-app-package.package-description .package-head {
   display: table;

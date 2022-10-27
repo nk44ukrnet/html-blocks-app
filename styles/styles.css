@@ -333,7 +333,7 @@ body {
   flex-wrap: wrap;
   gap: var(--gap-sm);
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-top: var(--gap-sm);
   padding-bottom: var(--gap-sm);
 }
@@ -342,6 +342,36 @@ body {
 }
 .hb-app-package.package-description .text-content {
   flex: 1 1 500px;
+}
+.hb-app-package.package-description .text-content .headline {
+  background-color: var(--color1);
+  padding: var(--gap-xsm);
+  margin: var(--gap-sm) 0;
+}
+.hb-app-package.package-description .text-content .listing {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.hb-app-package.package-description .text-content .listing li {
+  margin-bottom: var(--gap-xsm);
+}
+.hb-app-package.package-description .text-content .listing li::before {
+  content: attr(data-count);
+  padding: var(--gap-xsm);
+  margin-right: var(--gap-xsm);
+  width: 15px;
+  height: 15px;
+  line-height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--color1);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 0;
+  left: 0;
+  box-sizing: content-box;
 }
 .hb-app-package.package-description .text-content .package-price {
   background-color: var(--light);
